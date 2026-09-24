@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { huninn } from "@/lib/fonts";
 import SiteHeader from "../_components/site-header";
 import PomodoroTimer from "./pomodoro-timer";
+import { PAGE_TITLE } from "./title";
 
 export const metadata: Metadata = {
-  title: "專注蕃茄鐘 | 小工具箱",
+  title: PAGE_TITLE,
   description: "25 分鐘專注、5 分鐘休息，幫你維持工作節奏",
 };
 

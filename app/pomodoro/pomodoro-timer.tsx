@@ -9,6 +9,7 @@ import {
   playStart,
   unlockAudio,
 } from "./sounds";
+import { restoreTitle } from "./title";
 
 type Mode = "focus" | "short" | "long";
 
@@ -105,6 +106,7 @@ export default function PomodoroTimer() {
       }
 
       setRunning(false);
+      restoreTitle();
       let next: Mode = "focus";
       if (mode === "focus") {
         const done = completed + 1;
@@ -126,16 +128,13 @@ export default function PomodoroTimer() {
     return () => clearInterval(id);
   }, [running, mode, completed, durations]);
 
-  // 分頁標題顯示剩餘時間，離開頁面時還原
+  // 計時中在分頁標題顯示剩餘時間。
+  // 停止時由 pause / goTo / 時間到 各自還原標題，不在 effect cleanup 裡還原——
+  // cleanup 在換頁時會比 Next.js 設定新頁面標題還晚執行，會把別頁的標題蓋掉
   useEffect(() => {
-    const original = document.title;
-    return () => {
-      document.title = original;
-    };
-  }, []);
-  useEffect(() => {
+    if (!running) return;
     document.title = `${formatTime(remaining)} ${theme.emoji} ${theme.label} | 專注蕃茄鐘`;
-  }, [remaining, theme]);
+  }, [running, remaining, theme]);
 
   function start() {
     unlockAudio();
@@ -150,10 +149,12 @@ export default function PomodoroTimer() {
     playPause();
     setRemaining(Math.max(0, endAtRef.current - Date.now()));
     setRunning(false);
+    restoreTitle();
   }
 
   function goTo(next: Mode) {
     setRunning(false);
+    restoreTitle();
     setMode(next);
     setRemaining(durations[next] * MIN);
     setMessage(null);
