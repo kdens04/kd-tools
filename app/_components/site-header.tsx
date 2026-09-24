@@ -12,7 +12,7 @@ export default function SiteHeader() {
           <span className="flex h-10 w-10 items-center justify-center rounded-xl border-[3px] border-[#5b3a29] bg-[#ffb5a7] text-xl shadow-[2px_2px_0_#5b3a29] transition group-hover:rotate-[-8deg]">
             🧰
           </span>
-          <span className="text-xl tracking-wide">KD的小工具箱</span>
+          <span className="text-xl tracking-wide">小工具箱</span>
         </Link>
 
         <nav className="flex items-center gap-1 sm:gap-2">

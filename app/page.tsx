@@ -49,8 +49,6 @@ export default function Home() {
                 ✨ 3 個可愛小工具 · 免安裝打開就能用
               </span>
               <h1 className="text-6xl leading-tight tracking-wide sm:text-7xl">
-                KD的
-                <br />
                 <span className="relative inline-block">
                   <span className="absolute inset-x-[-6px] bottom-2 h-5 -rotate-1 rounded-full bg-[#ffd36e]" />
                   <span className="relative">小工具箱</span>

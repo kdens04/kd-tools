@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KD的小工具箱",
+  title: "小工具箱",
   description:
     "幫你決定午餐、陪你專心工作、再抽支籤看看今天運氣——一些讓生活更可愛一點的小工具。",
 };

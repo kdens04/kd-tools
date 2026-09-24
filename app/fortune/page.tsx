@@ -4,7 +4,7 @@ import SiteHeader from "../_components/site-header";
 import FortuneDraw from "./fortune-draw";
 
 export const metadata: Metadata = {
-  title: "好運抽籤 | kd-tools",
+  title: "好運抽籤 | 小工具箱",
   description: "搖一搖籤筒，看看今天的運勢",
 };
 

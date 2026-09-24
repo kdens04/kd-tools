@@ -4,7 +4,7 @@ import SiteHeader from "../_components/site-header";
 import PomodoroTimer from "./pomodoro-timer";
 
 export const metadata: Metadata = {
-  title: "專注蕃茄鐘 | kd-tools",
+  title: "專注蕃茄鐘 | 小工具箱",
   description: "25 分鐘專注、5 分鐘休息，幫你維持工作節奏",
 };
 

@@ -4,7 +4,7 @@ import SiteHeader from "../_components/site-header";
 import LotteryWheel from "./lottery-wheel";
 
 export const metadata: Metadata = {
-  title: "要吃什麼勒？ | kd-tools",
+  title: "要吃什麼勒？ | 小工具箱",
   description: "選擇困難？轉一下轉盤決定今天吃什麼",
 };
 
